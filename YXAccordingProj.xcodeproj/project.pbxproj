@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53D9AD6C5CCCCB47CFE9DE10 /* libPods-YXAccordingProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 601FF6464F145D8B295534C5 /* libPods-YXAccordingProj.a */; };
 		842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4C362648C94000EEED63 /* AppDelegate.swift */; };
 		842A4C392648C94000EEED63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4C382648C94000EEED63 /* SceneDelegate.swift */; };
 		842A4C3B2648C94000EEED63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4C3A2648C94000EEED63 /* ContentView.swift */; };
@@ -22,6 +23,10 @@
 		842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CE32648D6A100EEED63 /* YXBaseTabBarView.swift */; };
 		842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */; };
 		842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */; };
+		84794776264A504200423EBE /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84794775264A504200423EBE /* YXColorCategory.swift */; };
+		8479477B264A7C3900423EBE /* YXUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479477A264A7C3900423EBE /* YXUserVC.swift */; };
+		849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21E3264A27580081F488 /* YXBaseNavigationView.swift */; };
+		849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		601FF6464F145D8B295534C5 /* libPods-YXAccordingProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXAccordingProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A4C332648C94000EEED63 /* YXAccordingProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXAccordingProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A4C362648C94000EEED63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842A4C382648C94000EEED63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,12 @@
 		842A4CE32648D6A100EEED63 /* YXBaseTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarView.swift; sourceTree = "<group>"; };
 		842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemModel.swift; sourceTree = "<group>"; };
 		842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemView.swift; sourceTree = "<group>"; };
+		84794775264A504200423EBE /* YXColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXColorCategory.swift; sourceTree = "<group>"; };
+		8479477A264A7C3900423EBE /* YXUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserVC.swift; sourceTree = "<group>"; };
+		849D21E3264A27580081F488 /* YXBaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseNavigationView.swift; sourceTree = "<group>"; };
+		849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSizeCategory.swift; sourceTree = "<group>"; };
+		B5FFCE7F6A7ECE86752A1E88 /* Pods-YXAccordingProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXAccordingProj.debug.xcconfig"; path = "Target Support Files/Pods-YXAccordingProj/Pods-YXAccordingProj.debug.xcconfig"; sourceTree = "<group>"; };
+		CB49B210AEBAFE6522637B51 /* Pods-YXAccordingProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXAccordingProj.release.xcconfig"; path = "Target Support Files/Pods-YXAccordingProj/Pods-YXAccordingProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D9AD6C5CCCCB47CFE9DE10 /* libPods-YXAccordingProj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EF832E00F0836B7FCED2E63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				601FF6464F145D8B295534C5 /* libPods-YXAccordingProj.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		842A4C2A2648C94000EEED63 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +118,8 @@
 				842A4C4C2648C94200EEED63 /* YXAccordingProjTests */,
 				842A4C572648C94200EEED63 /* YXAccordingProjUITests */,
 				842A4C342648C94000EEED63 /* Products */,
+				F89BF57277E6104752F243ED /* Pods */,
+				2EF832E00F0836B7FCED2E63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,8 +136,10 @@
 		842A4C352648C94000EEED63 /* YXAccordingProj */ = {
 			isa = PBXGroup;
 			children = (
+				84794777264A7BFE00423EBE /* User */,
 				842A4CCB2648CFB300EEED63 /* Home */,
 				842A4C9C2648CDBD00EEED63 /* Base */,
+				849D21E5264A28A20081F488 /* Common */,
 				842A4C362648C94000EEED63 /* AppDelegate.swift */,
 				842A4C382648C94000EEED63 /* SceneDelegate.swift */,
 				842A4C3A2648C94000EEED63 /* ContentView.swift */,
@@ -177,6 +202,7 @@
 			children = (
 				842A4CE32648D6A100EEED63 /* YXBaseTabBarView.swift */,
 				842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */,
+				849D21E3264A27580081F488 /* YXBaseNavigationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +239,56 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		84794774264A502E00423EBE /* YXCategoryColor */ = {
+			isa = PBXGroup;
+			children = (
+				84794775264A504200423EBE /* YXColorCategory.swift */,
+			);
+			path = YXCategoryColor;
+			sourceTree = "<group>";
+		};
+		84794777264A7BFE00423EBE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8479477A264A7C3900423EBE /* YXUserVC.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		849D21E5264A28A20081F488 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				849D21EA264A2AB90081F488 /* YXCategorys */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		849D21EA264A2AB90081F488 /* YXCategorys */ = {
+			isa = PBXGroup;
+			children = (
+				84794774264A502E00423EBE /* YXCategoryColor */,
+				849D21EB264A2AB90081F488 /* YXCategoryNSObject */,
+			);
+			path = YXCategorys;
+			sourceTree = "<group>";
+		};
+		849D21EB264A2AB90081F488 /* YXCategoryNSObject */ = {
+			isa = PBXGroup;
+			children = (
+				849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */,
+			);
+			path = YXCategoryNSObject;
+			sourceTree = "<group>";
+		};
+		F89BF57277E6104752F243ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5FFCE7F6A7ECE86752A1E88 /* Pods-YXAccordingProj.debug.xcconfig */,
+				CB49B210AEBAFE6522637B51 /* Pods-YXAccordingProj.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842A4C5D2648C94200EEED63 /* Build configuration list for PBXNativeTarget "YXAccordingProj" */;
 			buildPhases = (
+				9129FFF985A75DAAEA4231B5 /* [CP] Check Pods Manifest.lock */,
 				842A4C2F2648C94000EEED63 /* Sources */,
 				842A4C302648C94000EEED63 /* Frameworks */,
 				842A4C312648C94000EEED63 /* Resources */,
@@ -280,6 +357,7 @@
 				TargetAttributes = {
 					842A4C322648C94000EEED63 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 					};
 					842A4C482648C94200EEED63 = {
 						CreatedOnToolsVersion = 12.4;
@@ -338,18 +416,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9129FFF985A75DAAEA4231B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YXAccordingProj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		842A4C2F2648C94000EEED63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				842A4CC72648CF8A00EEED63 /* YXBaseVC.swift in Sources */,
+				849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */,
 				842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */,
 				842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */,
 				842A4CD72648CFEF00EEED63 /* YXHomeVC.swift in Sources */,
+				84794776264A504200423EBE /* YXColorCategory.swift in Sources */,
+				8479477B264A7C3900423EBE /* YXUserVC.swift in Sources */,
 				842A4CDC2648D25300EEED63 /* YXBaseNavigationVC.swift in Sources */,
 				842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */,
 				842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */,
+				849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */,
 				842A4CC22648CF0B00EEED63 /* YXBaseTabBar.swift in Sources */,
 				842A4C392648C94000EEED63 /* SceneDelegate.swift in Sources */,
 				842A4C3B2648C94000EEED63 /* ContentView.swift in Sources */,
@@ -517,9 +624,11 @@
 		};
 		842A4C5E2648C94200EEED63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FFCE7F6A7ECE86752A1E88 /* Pods-YXAccordingProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YXAccordingProj/Preview Content\"";
 				DEVELOPMENT_TEAM = 2HSQ24Z864;
@@ -532,6 +641,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yhx.YXAccordingProj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -539,9 +649,11 @@
 		};
 		842A4C5F2648C94200EEED63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB49B210AEBAFE6522637B51 /* Pods-YXAccordingProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YXAccordingProj/Preview Content\"";
 				DEVELOPMENT_TEAM = 2HSQ24Z864;

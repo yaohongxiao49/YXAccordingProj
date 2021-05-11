@@ -11,6 +11,7 @@ typealias YXBaseTabBarViewTapBlock = (Int) ->(Void)
 
 class YXBaseTabBarView: UIView {
     
+    var itemViewArr = NSMutableArray.init()
     var itemModelArr = NSMutableArray.init()
     var yxBaseTabBarViewTapBlock : YXBaseTabBarViewTapBlock?
     
@@ -29,7 +30,7 @@ class YXBaseTabBarView: UIView {
     func initView() {
         
         let imgView = UIImageView.init(frame: self.bounds)
-        imgView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        imgView.backgroundColor = UIColor.yxColorWithHexString(hex: "#000000", alpha: 0.5)
         self.addSubview(imgView)
         
         initTabBarItem()
@@ -40,11 +41,22 @@ class YXBaseTabBarView: UIView {
             let itemView = YXBaseTabBarItemView.init(frame: CGRect.init(x: (itemWidth * Int(i)), y: 0, width: itemWidth, height: Int(self.bounds.height)))
             itemView.itemModel = itemModelArr[i] as? YXBaseTabBarItemModel;
             itemView.tag = i;
-            itemView.yxBaseTabBarItemViewTapBlock = {(view) ->() in
+            itemView.yxBaseTabBarItemViewTapBlock = {(view : YXBaseTabBarItemView) ->() in
                 
+                for originalItemView in self.itemViewArr {
+                    let forItemView : YXBaseTabBarItemView = originalItemView as! YXBaseTabBarItemView
+                    if forItemView.tag == view.tag {
+                        forItemView.itemModel?.type = .YXBaseTabBarItemStateTypeSel
+                    }
+                    else {
+                        forItemView.itemModel?.type = .YXBaseTabBarItemStateTypeNor
+                    }
+                    forItemView.itemModel = forItemView.itemModel!
+                }
                 self.yxBaseTabBarViewTapBlock!(view.tag)
             }
             self.addSubview(itemView)
+            itemViewArr.add(itemView)
         }
     }
     
@@ -61,6 +73,7 @@ class YXBaseTabBarView: UIView {
             model.selIcon = itemArr[i]["selIcon"]! as NSString;
             model.norTitleColor = UIColor.white;
             model.selTitleColor = UIColor.white;
+            model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
             itemModelArr.add(model)
         }
     }

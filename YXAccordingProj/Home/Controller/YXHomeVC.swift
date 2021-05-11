@@ -13,7 +13,7 @@ class YXHomeVC: YXBaseVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.navigationView.titleLab.text = "首页"
     }
 
 }

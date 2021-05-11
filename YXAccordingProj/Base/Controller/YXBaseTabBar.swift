@@ -29,7 +29,7 @@ class YXBaseTabBar: UITabBarController {
     //MARK:- 初始化视图
     func initView() {
     
-        let baseTabBarView = YXBaseTabBarView(frame: CGRect.init(x: 0, y: self.tabBar.frame.minY, width: self.tabBar.bounds.width, height: self.tabBar.bounds.height))
+        let baseTabBarView = YXBaseTabBarView(frame: CGRect.init(x: 0, y: self.yxScreenHeight - self.yxToolHeight, width: self.tabBar.bounds.width, height: self.yxToolHeight))
         baseTabBarView.yxBaseTabBarViewTapBlock = {(tag) ->() in
             
             self.selectedIndex = tag
@@ -43,9 +43,7 @@ class YXBaseTabBar: UITabBarController {
     func initVC() {
         
         let homeVC = YXHomeVC.init()
-        homeVC.view.backgroundColor = UIColor.red
-        let settingVC = YXHomeVC.init()
-        settingVC.view.backgroundColor = UIColor.green
+        let settingVC = YXUserVC.init()
         
         addChildrenVC(homeVC, title: nil, image: nil, selectedImage: nil);
         addChildrenVC(settingVC, title: nil, image: nil, selectedImage: nil);

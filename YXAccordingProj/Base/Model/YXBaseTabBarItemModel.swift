@@ -7,8 +7,11 @@
 
 import UIKit
 
+/** 标签栏样式类型 */
 public enum YXBaseTabBarItemStateType {
+    /** 普通/未选中 */
     case YXBaseTabBarItemStateTypeNor
+    /** 选中 */
     case YXBaseTabBarItemStateTypeSel
 }
 

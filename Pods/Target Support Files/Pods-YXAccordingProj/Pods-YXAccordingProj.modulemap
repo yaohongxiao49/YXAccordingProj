@@ -1,0 +1,6 @@
+module Pods_YXAccordingProj {
+  umbrella header "Pods-YXAccordingProj-umbrella.h"
+
+  export *
+  module * { export * }
+}

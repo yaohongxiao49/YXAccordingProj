@@ -6,8 +6,21 @@
 //
 
 import UIKit
+import SnapKit
 
 class YXBaseVC: UIViewController {
+    
+    lazy var navigationView : YXBaseNavigationView = {
+        
+        let navigationView = YXBaseNavigationView.init();
+        navigationView.baseVC = self
+        self.view.addSubview(navigationView)
+        navigationView.snp.makeConstraints { make in
+            make.left.top.right.equalToSuperview()
+            make.height.equalTo(self.yxNavigationHeight)
+        }
+        return navigationView
+    }()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,6 +32,6 @@ class YXBaseVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.white
     }
-    
 }

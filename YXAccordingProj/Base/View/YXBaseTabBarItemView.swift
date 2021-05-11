@@ -6,15 +6,53 @@
 //
 
 import UIKit
+import RxSwift
+import SnapKit
 
 typealias YXBaseTabBarItemViewTapBlock = (YXBaseTabBarItemView) ->(Void)
 
 class YXBaseTabBarItemView: UIView {
     
     var yxBaseTabBarItemViewTapBlock: YXBaseTabBarItemViewTapBlock?
-    var imgV : UIImageView?
-    var titleLab : UILabel?
-    var btn : UIButton?
+    lazy var imgV : UIImageView = {
+        
+        let imgV = UIImageView()
+        imgV.contentMode = .scaleAspectFit
+        self.addSubview(imgV)
+        imgV.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalToSuperview().offset(6)
+            make.height.equalTo(25)
+        }
+        return imgV
+    }()
+    
+    lazy var titleLab : UILabel = {
+        
+        let titleLab = UILabel()
+        titleLab.textAlignment = .center
+        titleLab.font = .boldSystemFont(ofSize: 10)
+        titleLab.textColor = UIColor.white
+        self.addSubview(titleLab)
+        titleLab.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(self.imgV.snp.bottom)
+            make.height.equalTo(16)
+        }
+        return titleLab
+    }()
+    
+    lazy var btn : UIButton = {
+        
+        let btn = UIButton.init(type: UIButton.ButtonType.custom)
+        btn.backgroundColor = UIColor.clear
+        btn.addTarget(self, action: #selector(progressBtn), for: UIControl.Event.touchUpInside)
+        self.addSubview(btn)
+        btn.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        return btn
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,24 +84,7 @@ class YXBaseTabBarItemView: UIView {
     //MARK:- 初始化视图
     func initView() {
      
-        let tapGesture = UITapGestureRecognizer.init(target: self, action: Selector(("tapGesture")))
-        self.addGestureRecognizer(tapGesture)
-        
-        self.imgV = UIImageView.init(frame: CGRect.init(x: 0, y: 6, width: self.bounds.size.width, height: 25))
-        self.imgV?.contentMode = .scaleAspectFit
-        self.addSubview(self.imgV!)
-        
-        self.titleLab = UILabel.init(frame: CGRect.init(x: 0, y: (self.imgV?.frame.maxY)!, width: self.bounds.size.width, height: 16))
-        self.titleLab?.textAlignment = .center
-        self.titleLab?.font = .boldSystemFont(ofSize: 10)
-        self.titleLab?.textColor = UIColor.white
-        self.addSubview(self.titleLab!)
-        
-        self.btn = UIButton.init(type: UIButton.ButtonType.custom)
-        self.btn?.backgroundColor = UIColor.clear
-        self.btn?.frame = self.bounds
-        self.btn?.addTarget(self, action: #selector(progressBtn), for: UIControl.Event.touchUpInside)
-        self.addSubview(self.btn!)
+        self.btn.isHidden = false
     }
     
     //MARK:- 更新视图
@@ -71,16 +92,16 @@ class YXBaseTabBarItemView: UIView {
         
         switch self.itemModel?.type {
         case .YXBaseTabBarItemStateTypeNor:
-            self.imgV?.image = UIImage.init(named: (self.itemModel?.norIcon!)! as String)
-            self.titleLab?.textColor = self.itemModel?.norTitleColor
+            self.imgV.image = UIImage.init(named: (self.itemModel?.norIcon!)! as String)
+            self.titleLab.textColor = self.itemModel?.norTitleColor
         case .YXBaseTabBarItemStateTypeSel:
-            self.imgV?.image = UIImage.init(named: (self.itemModel?.selIcon!)! as String)
-            self.titleLab?.textColor = self.itemModel?.selTitleColor
+            self.imgV.image = UIImage.init(named: (self.itemModel?.selIcon!)! as String)
+            self.titleLab.textColor = self.itemModel?.selTitleColor
         default:
-            self.imgV?.image = UIImage.init(named: (self.itemModel?.norIcon!)! as String)
-            self.titleLab?.textColor = self.itemModel?.norTitleColor
+            self.imgV.image = UIImage.init(named: (self.itemModel?.norIcon!)! as String)
+            self.titleLab.textColor = self.itemModel?.norTitleColor
         }
         
-        self.titleLab?.text = self.itemModel?.itemTitle as String?
+        self.titleLab.text = self.itemModel?.itemTitle as String?
     }
 }
