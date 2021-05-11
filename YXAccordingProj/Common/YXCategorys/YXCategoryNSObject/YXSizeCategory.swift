@@ -40,9 +40,6 @@ public extension NSObject {
         get {
             return setYXSafeAreaInsets()
         }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxSafeAreaInsets, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        }
     }
     
     //FIXME: 获取是否是全面屏
@@ -50,9 +47,6 @@ public extension NSObject {
         
         get {
             return self.yxSafeAreaInsets.bottom > 0.0 ? true : false
-        }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxBoolFullScreen, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     
@@ -62,19 +56,13 @@ public extension NSObject {
         get {
             return UIApplication.shared.isProxy()
         }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxBoolPortrait, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        }
     }
     
     //FIXME: 获取屏幕宽度
     var yxScreenWidth : CGFloat {
         
         get {
-            return viewSizeStruct.yxScreenWidth//objc_getAssociatedObject(self, &viewSizeStruct.yxScreenWidth) as! CGFloat
-        }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxScreenWidth, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            return viewSizeStruct.yxScreenWidth
         }
     }
     
@@ -84,9 +72,6 @@ public extension NSObject {
         get {
             return viewSizeStruct.yxScreenHeight
         }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxScreenHeight, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        }
     }
     
     //FIXME: 获取状态栏高度
@@ -94,9 +79,6 @@ public extension NSObject {
         
         get {
             return self.yxBoolFullScreen ? self.yxSafeAreaInsets.top : 20.0
-        }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxStatusBarHeight, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     
@@ -106,9 +88,6 @@ public extension NSObject {
         get {
             return 44.0 + self.yxStatusBarHeight
         }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxNavigationHeight, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        }
     }
     
     //FIXME: 获取工具栏高度
@@ -116,9 +95,6 @@ public extension NSObject {
         
         get {
             return 49.0 + self.yxSafeAreaInsets.bottom
-        }
-        set {
-            objc_setAssociatedObject(self, &viewSizeStruct.yxToolHeight, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     
