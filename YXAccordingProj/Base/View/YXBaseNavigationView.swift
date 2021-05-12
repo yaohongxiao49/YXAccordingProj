@@ -49,7 +49,7 @@ class YXBaseNavigationView: UIView {
         
         let titleLab = UILabel.init()
         titleLab.textAlignment = .center
-        titleLab.font = UIFont.boldSystemFont(ofSize: 16)
+        titleLab.font = UIFont.boldSystemFont(ofSize: 18)
         titleLab.textColor = UIColor.yxColorWithHexString(hex: "#000000")
         self.bgView.addSubview(titleLab)
         titleLab.snp.makeConstraints { make in

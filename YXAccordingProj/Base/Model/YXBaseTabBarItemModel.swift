@@ -17,11 +17,11 @@ public enum YXBaseTabBarItemStateType {
 
 class YXBaseTabBarItemModel: NSObject {
 
-    var vc : YXBaseVC!
+    var vc: YXBaseVC!
     var itemTitle: NSString?
     var norIcon: NSString?
     var selIcon: NSString?
     var norTitleColor: UIColor?
     var selTitleColor: UIColor?
-    var type : YXBaseTabBarItemStateType?
+    var type: YXBaseTabBarItemStateType?
 }

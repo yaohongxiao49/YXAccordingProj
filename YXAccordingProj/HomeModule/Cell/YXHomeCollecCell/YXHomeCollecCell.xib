@@ -137,10 +137,10 @@
             </constraints>
             <connections>
                 <outlet property="bgView" destination="xZo-4I-q5b" id="ONV-lU-Izh"/>
+                <outlet property="pixelSizeLab" destination="DvK-IH-hOD" id="qIy-Yh-KQX"/>
                 <outlet property="pixelTitleLab" destination="ITd-9w-dAd" id="eiB-kU-Dk5"/>
                 <outlet property="printSizeLab" destination="wfD-Oc-osp" id="Ldi-9W-zrK"/>
                 <outlet property="printTitleLab" destination="kcY-P2-HH8" id="uoe-rG-5mz"/>
-                <outlet property="prixelSizeLab" destination="DvK-IH-hOD" id="sSa-TP-WY4"/>
                 <outlet property="takingPicBtn" destination="4I5-nP-ui2" id="nWI-bs-o7J"/>
                 <outlet property="titleLab" destination="FgV-hv-9oN" id="2kA-4T-EmR"/>
             </connections>
