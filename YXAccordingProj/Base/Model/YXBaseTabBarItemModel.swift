@@ -17,6 +17,7 @@ public enum YXBaseTabBarItemStateType {
 
 class YXBaseTabBarItemModel: NSObject {
 
+    var vc : YXBaseVC!
     var itemTitle: NSString?
     var norIcon: NSString?
     var selIcon: NSString?

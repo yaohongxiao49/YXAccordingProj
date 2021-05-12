@@ -16,9 +16,11 @@ class YXBaseVC: UIViewController {
         navigationView.baseVC = self
         self.view.addSubview(navigationView)
         navigationView.snp.makeConstraints { make in
+            
             make.left.top.right.equalToSuperview()
             make.height.equalTo(self.yxNavigationHeight)
         }
+        
         return navigationView
     }()
 
@@ -34,4 +36,5 @@ class YXBaseVC: UIViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
     }
+    
 }

@@ -30,7 +30,7 @@ class YXBaseTabBarView: UIView {
     func initView() {
         
         let imgView = UIImageView.init(frame: self.bounds)
-        imgView.backgroundColor = UIColor.yxColorWithHexString(hex: "#000000", alpha: 0.5)
+        imgView.backgroundColor = UIColor.clear
         self.addSubview(imgView)
         
         initTabBarItem()
@@ -63,7 +63,7 @@ class YXBaseTabBarView: UIView {
     //MARK:- 初始化标签
     func initTabBarItem() {
         
-        let itemArr = [["title": "首页", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"], ["title": "我的", "norIcon": "YXUserTabNorImg", "selIcon": "YXUserTabSelImg"]]
+        let itemArr = [["title": "首页", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"], ["title": "工具", "norIcon": "YXToolTabNorImg", "selIcon": "YXToolTabSelImg"]]
         
         //项目数据
         for i in 0 ..< itemArr.count {
@@ -71,8 +71,8 @@ class YXBaseTabBarView: UIView {
             model.itemTitle = itemArr[i]["title"]! as NSString
             model.norIcon = itemArr[i]["norIcon"]! as NSString;
             model.selIcon = itemArr[i]["selIcon"]! as NSString;
-            model.norTitleColor = UIColor.white;
-            model.selTitleColor = UIColor.white;
+            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000");
+            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF");
             model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
             itemModelArr.add(model)
         }

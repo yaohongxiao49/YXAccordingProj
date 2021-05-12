@@ -1,20 +1,20 @@
 //
-//  YXUserVC.swift
+//  YXToolVC.swift
 //  YXAccordingProj
 //
-//  Created by ios on 2021/5/11.
+//  Created by ios on 2021/5/12.
 //
 
 import UIKit
 
-class YXUserVC: YXBaseVC {
+class YXToolVC: YXBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.red
-        self.navigationView.titleLab.text = "个人中心"
+        self.navigationView.titleLab.text = "工具"
         
         initView()
     }
@@ -22,4 +22,5 @@ class YXUserVC: YXBaseVC {
     func initView() {
         
     }
+    
 }

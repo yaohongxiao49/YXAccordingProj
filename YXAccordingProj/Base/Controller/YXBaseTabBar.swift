@@ -8,57 +8,86 @@
 import UIKit
 
 class YXBaseTabBar: UITabBarController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //设置是否半透明
-        self.tabBar.isTranslucent = true
-        let standardAppearance = self.tabBar.standardAppearance;
-        standardAppearance.backgroundEffect = nil;
-        standardAppearance.backgroundColor = UIColor.clear;
-        standardAppearance.backgroundImage = nil
-        standardAppearance.shadowImage = nil
-        standardAppearance.shadowColor = UIColor.clear;
-        self.tabBar.standardAppearance = standardAppearance;
-
-        initVC()
-        initView()
-    }
-
-    //MARK:- 初始化视图
-    func initView() {
     
-        let baseTabBarView = YXBaseTabBarView(frame: CGRect.init(x: 0, y: self.yxScreenHeight - self.yxToolHeight, width: self.tabBar.bounds.width, height: self.yxToolHeight))
+    lazy var customTabbar : UITabBar = {
+        
+        let customTabbar = self.tabBar
+        customTabbar.isTranslucent = true
+        customTabbar.standardAppearance.backgroundEffect = nil;
+        customTabbar.standardAppearance.backgroundColor = UIColor.white
+        customTabbar.standardAppearance.backgroundImage = nil
+        customTabbar.standardAppearance.shadowImage = nil
+        customTabbar.standardAppearance.shadowColor = UIColor.clear
+        
+        return customTabbar
+    }()
+    
+    lazy var baseTabBarView : YXBaseTabBarView = {
+        
+        let baseTabBarView = YXBaseTabBarView(frame: CGRect.init(x: 0, y: self.yxScreenHeight - self.yxToolHeight, width: self.customTabbar.bounds.width, height: self.yxToolHeight))
+        self.view.addSubview(baseTabBarView)
         baseTabBarView.yxBaseTabBarViewTapBlock = {(tag) ->() in
             
             self.selectedIndex = tag
         }
-        self.view.addSubview(baseTabBarView)
         
-        self.tabBar.removeFromSuperview()
+        baseTabBarView.snp.makeConstraints { make in
+            
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(self.yxToolHeight)
+        }
+        
+        return baseTabBarView
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        initVC()
+        initView()
+    }
+    
+    //MARK:- 初始创建标签栏数据
+    func initItemValue() -> NSMutableArray {
+        
+        let itemModelArr = NSMutableArray.init()
+        
+        let homeVC = YXHomeVC.init()
+        let toolVC = YXToolVC.init()
+        let itemArr = [["vc": homeVC, "title": "首页", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"], ["vc": toolVC, "title": "工具", "norIcon": "YXToolTabNorImg", "selIcon": "YXToolTabSelImg"]]
+        for i in 0 ..< itemArr.count {
+            let model = YXBaseTabBarItemModel.init()
+            model.vc = (itemArr[i]["vc"] as! YXBaseVC)
+            model.itemTitle = itemArr[i]["title"]! as? NSString
+            model.norIcon = itemArr[i]["norIcon"]! as? NSString;
+            model.selIcon = itemArr[i]["selIcon"]! as? NSString;
+            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000");
+            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF");
+            model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
+            itemModelArr.add(model)
+        }
+        
+        return itemModelArr
+    }
+
+    //MARK:- 初始化视图
+    func initView() {
+        
+        self.baseTabBarView.isHidden = false
     }
     
     //MARK:- 初始化控制器
     func initVC() {
         
-        let homeVC = YXHomeVC.init()
-        let settingVC = YXUserVC.init()
-        
-        addChildrenVC(homeVC, title: nil, image: nil, selectedImage: nil);
-        addChildrenVC(settingVC, title: nil, image: nil, selectedImage: nil);
+        for model : YXBaseTabBarItemModel in initItemValue() as! [YXBaseTabBarItemModel] {
+            addChildrenVC(model.vc, title: nil, image: nil, selectedImage: nil);
+        }
     }
     
     //MARK:- 添加控制器
     func addChildrenVC(_ childController: UIViewController, title: String?, image: UIImage?, selectedImage: UIImage?) {
-        
-//        childController.title = title
-//        childController.tabBarItem = UITabBarItem(title: nil, image: image?.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal))
-//        
-//        if UIDevice.current.userInterfaceIdiom == .phone {
-//            childController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-//        }
 
         addChild(YXBaseNavigationVC(rootViewController: childController))
     }
+    
 }

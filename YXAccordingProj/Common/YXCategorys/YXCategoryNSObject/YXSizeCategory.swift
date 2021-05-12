@@ -34,7 +34,7 @@ public extension NSObject {
     }
     
     //MARK:- getting/setting
-    //FIXME: 获取安全区域
+    //MARK:- 获取安全区域
     var yxSafeAreaInsets : UIEdgeInsets {
         
         get {
@@ -42,7 +42,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取是否是全面屏
+    //MARK:- 获取是否是全面屏
     var yxBoolFullScreen : Bool {
         
         get {
@@ -50,7 +50,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取是否是竖屏
+    //MARK:- 获取是否是竖屏
     var yxBoolPortrait : Bool {
         
         get {
@@ -58,7 +58,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取屏幕宽度
+    //MARK:- 获取屏幕宽度
     var yxScreenWidth : CGFloat {
         
         get {
@@ -66,7 +66,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取屏幕高度
+    //MARK:- 获取屏幕高度
     var yxScreenHeight : CGFloat {
         
         get {
@@ -74,7 +74,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取状态栏高度
+    //MARK:- 获取状态栏高度
     var yxStatusBarHeight : CGFloat {
         
         get {
@@ -82,7 +82,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取导航栏高度
+    //MARK:- 获取导航栏高度
     var yxNavigationHeight : CGFloat {
         
         get {
@@ -90,7 +90,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取工具栏高度
+    //MARK:- 获取工具栏高度
     var yxToolHeight : CGFloat {
         
         get {
@@ -98,7 +98,7 @@ public extension NSObject {
         }
     }
     
-    //FIXME: 获取最小设定值
+    //MARK:- 获取最小设定值
     var yxSmallHeight : CGFloat {
         
         get {
@@ -111,11 +111,11 @@ public extension NSObject {
     
     
     //MARK:- 设置属性值
-    //FIXME: 全面屏尺寸
+    //MARK:- 全面屏尺寸
     func setYXSafeAreaInsets() -> UIEdgeInsets {
         
         if #available(iOS 11.0, *) {
-            return UIApplication.shared.windows.last!.safeAreaInsets
+            return UIApplication.shared.windows.count == 0 ? .zero : UIApplication.shared.windows.last!.safeAreaInsets
         }
         
         return .zero;

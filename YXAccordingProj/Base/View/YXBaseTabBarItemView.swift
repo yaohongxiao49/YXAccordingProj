@@ -20,10 +20,12 @@ class YXBaseTabBarItemView: UIView {
         imgV.contentMode = .scaleAspectFit
         self.addSubview(imgV)
         imgV.snp.makeConstraints { make in
+            
             make.left.right.equalToSuperview()
             make.top.equalToSuperview().offset(6)
             make.height.equalTo(25)
         }
+        
         return imgV
     }()
     
@@ -35,10 +37,12 @@ class YXBaseTabBarItemView: UIView {
         titleLab.textColor = UIColor.white
         self.addSubview(titleLab)
         titleLab.snp.makeConstraints { make in
+            
             make.left.right.equalToSuperview()
             make.top.equalTo(self.imgV.snp.bottom)
             make.height.equalTo(16)
         }
+        
         return titleLab
     }()
     
@@ -49,15 +53,15 @@ class YXBaseTabBarItemView: UIView {
         btn.addTarget(self, action: #selector(progressBtn), for: UIControl.Event.touchUpInside)
         self.addSubview(btn)
         btn.snp.makeConstraints { make in
+            
             make.edges.equalToSuperview()
         }
+        
         return btn
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.backgroundColor = UIColor.clear
         
         initView()
     }
@@ -67,7 +71,7 @@ class YXBaseTabBarItemView: UIView {
     }
     
     //MARK:- progress
-    //FIXME: 点击按钮
+    //MARK:- 点击按钮
     @objc func progressBtn(sender: UIButton) {
         
         self.yxBaseTabBarItemViewTapBlock!(self)
@@ -75,15 +79,15 @@ class YXBaseTabBarItemView: UIView {
     
     //MARK:- setting
     public var itemModel : YXBaseTabBarItemModel? {
+        
         didSet {
-            
             updateView()
         }
     }
     
     //MARK:- 初始化视图
     func initView() {
-     
+        
         self.btn.isHidden = false
     }
     
@@ -104,4 +108,5 @@ class YXBaseTabBarItemView: UIView {
         
         self.titleLab.text = self.itemModel?.itemTitle as String?
     }
+    
 }

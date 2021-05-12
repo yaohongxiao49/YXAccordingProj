@@ -37,9 +37,11 @@ class YXBaseNavigationView: UIView {
         bgView.backgroundColor = UIColor.clear
         addSubview(bgView)
         bgView.snp.makeConstraints { make in
+            
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(self.yxNavigationHeight - self.yxStatusBarHeight)
         }
+        
         return bgView
     }()
     
@@ -51,28 +53,32 @@ class YXBaseNavigationView: UIView {
         titleLab.textColor = UIColor.yxColorWithHexString(hex: "#000000")
         self.bgView.addSubview(titleLab)
         titleLab.snp.makeConstraints { make in
+            
             make.center.equalToSuperview()
         }
+        
         return titleLab
     }()
     
     lazy var backBtn : UIButton = {
-       
+        
         let backBtn = UIButton.init(type: UIButton.ButtonType.custom)
         backBtn.setImage(UIImage.init(named: "YXBaseBackArrowImg"), for: UIControl.State.normal)
         backBtn.addTarget(self, action: #selector(progressBackBtn), for: UIControl.Event.touchUpInside)
         self.bgView.addSubview(backBtn)
         backBtn.snp.makeConstraints { make in
+            
             make.left.top.bottom.equalToSuperview()
             make.width.equalTo(backBtn.snp.height)
         }
+        
         return backBtn
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.yxColorWithHexString(hex: "#000000", alpha: 0.1)
+        self.backgroundColor = UIColor.yxColorWithHexString(hex: "#FFFFFF", alpha: 1)
         initView()
     }
     
@@ -97,4 +103,5 @@ class YXBaseNavigationView: UIView {
         self.titleLab.text = "标题";
         self.backBtn.isHidden = true
     }
+    
 }

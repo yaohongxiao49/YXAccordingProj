@@ -24,9 +24,11 @@
 		842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */; };
 		842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */; };
 		84794776264A504200423EBE /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84794775264A504200423EBE /* YXColorCategory.swift */; };
-		8479477B264A7C3900423EBE /* YXUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479477A264A7C3900423EBE /* YXUserVC.swift */; };
 		849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21E3264A27580081F488 /* YXBaseNavigationView.swift */; };
 		849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */; };
+		84EE7BF9264B75AD00CF9C61 /* YXHomeCollecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE7BF7264B75AD00CF9C61 /* YXHomeCollecCell.swift */; };
+		84EE7BFA264B75AD00CF9C61 /* YXHomeCollecCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EE7BF8264B75AD00CF9C61 /* YXHomeCollecCell.xib */; };
+		84EE7BFD264B86FF00CF9C61 /* YXToolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +72,11 @@
 		842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemModel.swift; sourceTree = "<group>"; };
 		842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemView.swift; sourceTree = "<group>"; };
 		84794775264A504200423EBE /* YXColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXColorCategory.swift; sourceTree = "<group>"; };
-		8479477A264A7C3900423EBE /* YXUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXUserVC.swift; sourceTree = "<group>"; };
 		849D21E3264A27580081F488 /* YXBaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseNavigationView.swift; sourceTree = "<group>"; };
 		849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSizeCategory.swift; sourceTree = "<group>"; };
+		84EE7BF7264B75AD00CF9C61 /* YXHomeCollecCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXHomeCollecCell.swift; sourceTree = "<group>"; };
+		84EE7BF8264B75AD00CF9C61 /* YXHomeCollecCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YXHomeCollecCell.xib; sourceTree = "<group>"; };
+		84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolVC.swift; sourceTree = "<group>"; };
 		B5FFCE7F6A7ECE86752A1E88 /* Pods-YXAccordingProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXAccordingProj.debug.xcconfig"; path = "Target Support Files/Pods-YXAccordingProj/Pods-YXAccordingProj.debug.xcconfig"; sourceTree = "<group>"; };
 		CB49B210AEBAFE6522637B51 /* Pods-YXAccordingProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXAccordingProj.release.xcconfig"; path = "Target Support Files/Pods-YXAccordingProj/Pods-YXAccordingProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,8 +140,8 @@
 		842A4C352648C94000EEED63 /* YXAccordingProj */ = {
 			isa = PBXGroup;
 			children = (
-				84794777264A7BFE00423EBE /* User */,
-				842A4CCB2648CFB300EEED63 /* Home */,
+				84EE7BFB264B86E000CF9C61 /* ToolModule */,
+				842A4CCB2648CFB300EEED63 /* HomeModule */,
 				842A4C9C2648CDBD00EEED63 /* Base */,
 				849D21E5264A28A20081F488 /* Common */,
 				842A4C362648C94000EEED63 /* AppDelegate.swift */,
@@ -207,13 +211,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		842A4CCB2648CFB300EEED63 /* Home */ = {
+		842A4CCB2648CFB300EEED63 /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
 				842A4CCC2648CFB300EEED63 /* Controller */,
 				842A4CCD2648CFB300EEED63 /* View */,
+				84EE7BF0264B750E00CF9C61 /* Cell */,
 			);
-			path = Home;
+			path = HomeModule;
 			sourceTree = "<group>";
 		};
 		842A4CCC2648CFB300EEED63 /* Controller */ = {
@@ -247,14 +252,6 @@
 			path = YXCategoryColor;
 			sourceTree = "<group>";
 		};
-		84794777264A7BFE00423EBE /* User */ = {
-			isa = PBXGroup;
-			children = (
-				8479477A264A7C3900423EBE /* YXUserVC.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		849D21E5264A28A20081F488 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +275,23 @@
 				849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */,
 			);
 			path = YXCategoryNSObject;
+			sourceTree = "<group>";
+		};
+		84EE7BF0264B750E00CF9C61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84EE7BF7264B75AD00CF9C61 /* YXHomeCollecCell.swift */,
+				84EE7BF8264B75AD00CF9C61 /* YXHomeCollecCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		84EE7BFB264B86E000CF9C61 /* ToolModule */ = {
+			isa = PBXGroup;
+			children = (
+				84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */,
+			);
+			path = ToolModule;
 			sourceTree = "<group>";
 		};
 		F89BF57277E6104752F243ED /* Pods */ = {
@@ -395,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842A4C432648C94200EEED63 /* LaunchScreen.storyboard in Resources */,
+				84EE7BFA264B75AD00CF9C61 /* YXHomeCollecCell.xib in Resources */,
 				842A4C402648C94200EEED63 /* Preview Assets.xcassets in Resources */,
 				842A4C3D2648C94200EEED63 /* Assets.xcassets in Resources */,
 			);
@@ -447,12 +462,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				842A4CC72648CF8A00EEED63 /* YXBaseVC.swift in Sources */,
+				84EE7BFD264B86FF00CF9C61 /* YXToolVC.swift in Sources */,
 				849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */,
 				842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */,
 				842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */,
 				842A4CD72648CFEF00EEED63 /* YXHomeVC.swift in Sources */,
 				84794776264A504200423EBE /* YXColorCategory.swift in Sources */,
-				8479477B264A7C3900423EBE /* YXUserVC.swift in Sources */,
 				842A4CDC2648D25300EEED63 /* YXBaseNavigationVC.swift in Sources */,
 				842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */,
 				842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */,
@@ -460,6 +475,7 @@
 				842A4CC22648CF0B00EEED63 /* YXBaseTabBar.swift in Sources */,
 				842A4C392648C94000EEED63 /* SceneDelegate.swift in Sources */,
 				842A4C3B2648C94000EEED63 /* ContentView.swift in Sources */,
+				84EE7BF9264B75AD00CF9C61 /* YXHomeCollecCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

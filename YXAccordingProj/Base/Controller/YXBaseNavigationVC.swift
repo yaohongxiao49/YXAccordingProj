@@ -38,6 +38,7 @@ class YXBaseNavigationVC: UINavigationController {
                 vc.hidesBottomBarWhenPushed = false;
             }
         }
+        
         super.setViewControllers(viewControllers, animated: animated)
     }
     
@@ -49,6 +50,8 @@ class YXBaseNavigationVC: UINavigationController {
         else {
             viewController.hidesBottomBarWhenPushed = false;
         }
+        
         super.pushViewController(viewController, animated: animated)
     }
+    
 }
