@@ -24,6 +24,13 @@
 		842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */; };
 		842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */; };
 		84794776264A504200423EBE /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84794775264A504200423EBE /* YXColorCategory.swift */; };
+		848257CF264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */; };
+		848257D1264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */; };
+		848257D4264CC48100B1C8CE /* YXToolPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257D3264CC48100B1C8CE /* YXToolPageControl.swift */; };
+		848257DA264D16B700B1C8CE /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 848257D6264D16B700B1C8CE /* 4.png */; };
+		848257DB264D16B700B1C8CE /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 848257D7264D16B700B1C8CE /* 2.png */; };
+		848257DC264D16B700B1C8CE /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 848257D8264D16B700B1C8CE /* 1.png */; };
+		848257DD264D16B700B1C8CE /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 848257D9264D16B700B1C8CE /* 3.png */; };
 		849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21E3264A27580081F488 /* YXBaseNavigationView.swift */; };
 		849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */; };
 		84EE7BFD264B86FF00CF9C61 /* YXToolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */; };
@@ -75,6 +82,13 @@
 		842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemModel.swift; sourceTree = "<group>"; };
 		842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemView.swift; sourceTree = "<group>"; };
 		84794775264A504200423EBE /* YXColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXColorCategory.swift; sourceTree = "<group>"; };
+		848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollView.swift; sourceTree = "<group>"; };
+		848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollInfoModel.swift; sourceTree = "<group>"; };
+		848257D3264CC48100B1C8CE /* YXToolPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolPageControl.swift; sourceTree = "<group>"; };
+		848257D6264D16B700B1C8CE /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		848257D7264D16B700B1C8CE /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		848257D8264D16B700B1C8CE /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		848257D9264D16B700B1C8CE /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		849D21E3264A27580081F488 /* YXBaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseNavigationView.swift; sourceTree = "<group>"; };
 		849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSizeCategory.swift; sourceTree = "<group>"; };
 		84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolVC.swift; sourceTree = "<group>"; };
@@ -146,6 +160,7 @@
 		842A4C352648C94000EEED63 /* YXAccordingProj */ = {
 			isa = PBXGroup;
 			children = (
+				848257D5264D16A600B1C8CE /* Source */,
 				84EE7BFB264B86E000CF9C61 /* ToolModule */,
 				842A4CCB2648CFB300EEED63 /* HomeModule */,
 				842A4C9C2648CDBD00EEED63 /* Base */,
@@ -260,9 +275,87 @@
 			path = YXCategoryColor;
 			sourceTree = "<group>";
 		};
+		848257C5264CBC6600B1C8CE /* YXTools */ = {
+			isa = PBXGroup;
+			children = (
+				848257C6264CBC8A00B1C8CE /* YXToolFuncScroll */,
+			);
+			path = YXTools;
+			sourceTree = "<group>";
+		};
+		848257C6264CBC8A00B1C8CE /* YXToolFuncScroll */ = {
+			isa = PBXGroup;
+			children = (
+				848257C8264CBD5000B1C8CE /* YXToolEntertainingDiversionsView */,
+				848257C9264CBD5000B1C8CE /* YXToolFuncPinScrollView */,
+				848257C7264CBD5000B1C8CE /* YXToolFuncCycleScrollView */,
+			);
+			path = YXToolFuncScroll;
+			sourceTree = "<group>";
+		};
+		848257C7264CBD5000B1C8CE /* YXToolFuncCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				848257D2264CC43B00B1C8CE /* Controller */,
+				848257CC264CBF9500B1C8CE /* Model */,
+				848257CD264CBF9500B1C8CE /* View */,
+			);
+			path = YXToolFuncCycleScrollView;
+			sourceTree = "<group>";
+		};
+		848257C8264CBD5000B1C8CE /* YXToolEntertainingDiversionsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YXToolEntertainingDiversionsView;
+			sourceTree = "<group>";
+		};
+		848257C9264CBD5000B1C8CE /* YXToolFuncPinScrollView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YXToolFuncPinScrollView;
+			sourceTree = "<group>";
+		};
+		848257CC264CBF9500B1C8CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		848257CD264CBF9500B1C8CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		848257D2264CC43B00B1C8CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				848257D3264CC48100B1C8CE /* YXToolPageControl.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		848257D5264D16A600B1C8CE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				848257D8264D16B700B1C8CE /* 1.png */,
+				848257D7264D16B700B1C8CE /* 2.png */,
+				848257D9264D16B700B1C8CE /* 3.png */,
+				848257D6264D16B700B1C8CE /* 4.png */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		849D21E5264A28A20081F488 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				848257C5264CBC6600B1C8CE /* YXTools */,
 				849D21EA264A2AB90081F488 /* YXCategorys */,
 			);
 			path = Common;
@@ -441,7 +534,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848257DA264D16B700B1C8CE /* 4.png in Resources */,
+				848257DC264D16B700B1C8CE /* 1.png in Resources */,
 				842A4C432648C94200EEED63 /* LaunchScreen.storyboard in Resources */,
+				848257DD264D16B700B1C8CE /* 3.png in Resources */,
+				848257DB264D16B700B1C8CE /* 2.png in Resources */,
 				84EE7C01264BB73600CF9C61 /* YXHomeCollecCell.xib in Resources */,
 				842A4C402648C94200EEED63 /* Preview Assets.xcassets in Resources */,
 				84EE7C07264BB7C000CF9C61 /* YXHomeCollecHeaderReusableView.xib in Resources */,
@@ -500,10 +597,13 @@
 				84EE7C06264BB7C000CF9C61 /* YXHomeCollecHeaderReusableView.swift in Sources */,
 				849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */,
 				842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */,
+				848257D1264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift in Sources */,
 				842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */,
 				842A4CD72648CFEF00EEED63 /* YXHomeVC.swift in Sources */,
 				84794776264A504200423EBE /* YXColorCategory.swift in Sources */,
 				842A4CDC2648D25300EEED63 /* YXBaseNavigationVC.swift in Sources */,
+				848257CF264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift in Sources */,
+				848257D4264CC48100B1C8CE /* YXToolPageControl.swift in Sources */,
 				842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */,
 				842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */,
 				849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */,

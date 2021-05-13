@@ -81,7 +81,7 @@ class YXHomeVC: YXBaseVC, UICollectionViewDelegateFlowLayout, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionView.elementKindSectionHeader {
-            let headerReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NSStringFromClass(YXHomeCollecHeaderReusableView.classForCoder()), for: indexPath)
+            let headerReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(YXHomeCollecHeaderReusableView.classForCoder()), for: indexPath)
             
             return headerReusableView
         }

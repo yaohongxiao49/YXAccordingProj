@@ -50,7 +50,7 @@ class YXBaseTabBarItemView: UIView {
         
         let btn = UIButton.init(type: UIButton.ButtonType.custom)
         btn.backgroundColor = UIColor.clear
-        btn.addTarget(self, action: #selector(progressBtn), for: UIControl.Event.touchUpInside)
+        btn.addTarget(self, action: #selector(progressBtn(sender:)), for: UIControl.Event.touchUpInside)
         self.addSubview(btn)
         btn.snp.makeConstraints { make in
             
