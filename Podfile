@@ -5,6 +5,9 @@ inhibit_all_warnings!
 def pods
     pod 'RxSwift' #线程
     pod 'SnapKit' #适配
+    pod 'SwiftyJSON' #json解析
+    pod 'SwiftyUserDefaults' #NSUserdefaults
+    pod 'Alamofire' #网络基础库
 end
 
 target 'YXAccordingProj' do
