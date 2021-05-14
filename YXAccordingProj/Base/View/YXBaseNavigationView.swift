@@ -8,15 +8,11 @@
 import UIKit
 import SnapKit
 
-/** 返回方式类型 */
-enum YXBaseNavigationBackType {
-    /** 推送方式 */
-    case YXBaseNavigationBackTypePush
-    /** 弹窗方式 */
-    case YXBaseNavigationBackTypePresent
-}
+typealias YXBaseNavigationViewBackBlock = () ->(Void)
 
 class YXBaseNavigationView: UIView {
+    
+    var yxBaseNavigationViewBackBlock : YXBaseNavigationViewBackBlock?
     
     var _baseVC : YXBaseVC!
     var baseVC : YXBaseVC {
@@ -28,8 +24,6 @@ class YXBaseNavigationView: UIView {
             _baseVC = newValue
         }
     }
-    
-    var backType : YXBaseNavigationBackType = .YXBaseNavigationBackTypePush
     
     lazy var bgView : UIView = {
         
@@ -86,15 +80,12 @@ class YXBaseNavigationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- 返回方法
-    func backMethodByType(type: YXBaseNavigationBackType) {
-        
-    }
-    
     //MARK:- 返回按钮事件
     @objc func progressBackBtn() {
         
-        
+        if (self.yxBaseNavigationViewBackBlock != nil) {
+            self.yxBaseNavigationViewBackBlock!()
+        }
     }
     
     //MARK:- 初始化视图

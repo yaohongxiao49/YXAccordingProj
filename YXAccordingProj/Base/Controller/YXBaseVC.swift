@@ -15,6 +15,12 @@ class YXBaseVC: UIViewController {
         let navigationView = YXBaseNavigationView.init();
         navigationView.baseVC = self
         self.view.addSubview(navigationView)
+        
+        weak var weakSelf = self
+        navigationView.yxBaseNavigationViewBackBlock = {() ->() in
+            
+            weakSelf?.navigationController?.popViewController(animated: true)
+        }
         navigationView.snp.makeConstraints { make in
             
             make.left.top.right.equalToSuperview()
@@ -37,4 +43,9 @@ class YXBaseVC: UIViewController {
         self.view.backgroundColor = UIColor.white
     }
     
+    //MARK:- 推送至子控制器
+    func pushToSonVC(vc: YXBaseVC, animated: Bool) {
+        
+        self.navigationController?.pushViewController(vc, animated: animated)
+    }
 }

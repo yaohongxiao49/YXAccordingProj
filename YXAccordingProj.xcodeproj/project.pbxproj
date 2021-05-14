@@ -23,6 +23,7 @@
 		842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CE32648D6A100EEED63 /* YXBaseTabBarView.swift */; };
 		842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */; };
 		842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */; };
+		84487AC4264E1056009A3838 /* YXSeparationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84487AC3264E1056009A3838 /* YXSeparationVC.swift */; };
 		84794776264A504200423EBE /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84794775264A504200423EBE /* YXColorCategory.swift */; };
 		848257CF264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */; };
 		848257D1264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */; };
@@ -81,6 +82,7 @@
 		842A4CE32648D6A100EEED63 /* YXBaseTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarView.swift; sourceTree = "<group>"; };
 		842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemModel.swift; sourceTree = "<group>"; };
 		842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemView.swift; sourceTree = "<group>"; };
+		84487AC3264E1056009A3838 /* YXSeparationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSeparationVC.swift; sourceTree = "<group>"; };
 		84794775264A504200423EBE /* YXColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXColorCategory.swift; sourceTree = "<group>"; };
 		848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollView.swift; sourceTree = "<group>"; };
 		848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollInfoModel.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				848257D5264D16A600B1C8CE /* Source */,
+				84487AC2264E101D009A3838 /* ProcessingImgsModule */,
 				84EE7BFB264B86E000CF9C61 /* ToolModule */,
 				842A4CCB2648CFB300EEED63 /* HomeModule */,
 				842A4C9C2648CDBD00EEED63 /* Base */,
@@ -265,6 +268,14 @@
 				842A4CE92648F85400EEED63 /* YXBaseTabBarItemModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		84487AC2264E101D009A3838 /* ProcessingImgsModule */ = {
+			isa = PBXGroup;
+			children = (
+				84487AC3264E1056009A3838 /* YXSeparationVC.swift */,
+			);
+			path = ProcessingImgsModule;
 			sourceTree = "<group>";
 		};
 		84794774264A502E00423EBE /* YXCategoryColor */ = {
@@ -606,6 +617,7 @@
 				848257D4264CC48100B1C8CE /* YXToolPageControl.swift in Sources */,
 				842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */,
 				842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */,
+				84487AC4264E1056009A3838 /* YXSeparationVC.swift in Sources */,
 				849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */,
 				842A4CC22648CF0B00EEED63 /* YXBaseTabBar.swift in Sources */,
 				842A4C392648C94000EEED63 /* SceneDelegate.swift in Sources */,

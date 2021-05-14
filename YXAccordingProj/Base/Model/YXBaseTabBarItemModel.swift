@@ -17,11 +17,18 @@ public enum YXBaseTabBarItemStateType {
 
 class YXBaseTabBarItemModel: NSObject {
 
+    /** 基础控制器 */
     var vc: YXBaseVC!
+    /** 标题 */
     var itemTitle: NSString?
+    /** 正常icon */
     var norIcon: NSString?
+    /** 选中icon */
     var selIcon: NSString?
+    /** 正常标题色值 */
     var norTitleColor: UIColor?
+    /** 选中标题色值 */
     var selTitleColor: UIColor?
+    /** 标签栏样式类型 */
     var type: YXBaseTabBarItemStateType?
 }

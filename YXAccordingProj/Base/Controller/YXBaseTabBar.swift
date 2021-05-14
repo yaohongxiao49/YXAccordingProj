@@ -12,11 +12,12 @@ class YXBaseTabBar: UITabBarController {
     lazy var customTabbar : UITabBar = {
         
         let customTabbar = self.tabBar
+        customTabbar.frame = CGRect.init(x: 0.0, y: self.yxScreenHeight - self.yxToolHeight, width: self.yxScreenWidth, height: self.yxToolHeight)
         customTabbar.isTranslucent = true
         customTabbar.standardAppearance.backgroundEffect = nil;
         customTabbar.standardAppearance.backgroundColor = UIColor.white
-        customTabbar.standardAppearance.backgroundImage = nil
-        customTabbar.standardAppearance.shadowImage = nil
+        customTabbar.standardAppearance.backgroundImage = UIImage()
+        customTabbar.standardAppearance.shadowImage = UIImage()
         customTabbar.standardAppearance.shadowColor = UIColor.clear
         
         return customTabbar
@@ -24,22 +25,31 @@ class YXBaseTabBar: UITabBarController {
     
     lazy var baseTabBarView : YXBaseTabBarView = {
         
-        let baseTabBarView = YXBaseTabBarView(frame: CGRect.init(x: 0, y: self.yxScreenHeight - self.yxToolHeight, width: self.customTabbar.bounds.width, height: self.yxToolHeight))
-        self.view.addSubview(baseTabBarView)
+        let baseTabBarView = YXBaseTabBarView(frame: self.tabBar.bounds)
+        self.tabBar.addSubview(baseTabBarView)
         baseTabBarView.yxBaseTabBarViewTapBlock = {(tag) ->() in
             
             self.selectedIndex = tag
         }
         
         baseTabBarView.snp.makeConstraints { make in
-            
-            make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(self.yxToolHeight)
+
+            make.edges.equalToSuperview()
         }
         
         return baseTabBarView
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tabBar.subviews.forEach { (subView) in
+            if subView is UIControl {
+                subView.removeFromSuperview()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
