@@ -39,8 +39,8 @@ class YXBaseTabBarView: UIView {
         
         for i in 0 ..< itemModelArr.count {
             let itemView = YXBaseTabBarItemView.init(frame: CGRect.init(x: (itemWidth * Int(i)), y: 0, width: itemWidth, height: Int(self.bounds.height)))
-            itemView.itemModel = itemModelArr[i] as? YXBaseTabBarItemModel;
-            itemView.tag = i;
+            itemView.itemModel = itemModelArr[i] as? YXBaseTabBarItemModel
+            itemView.tag = i
             itemView.yxBaseTabBarItemViewTapBlock = {(view : YXBaseTabBarItemView) ->() in
                 
                 for originalItemView in self.itemViewArr {
@@ -69,10 +69,10 @@ class YXBaseTabBarView: UIView {
         for i in 0 ..< itemArr.count {
             let model = YXBaseTabBarItemModel.init()
             model.itemTitle = itemArr[i]["title"]! as NSString
-            model.norIcon = itemArr[i]["norIcon"]! as NSString;
-            model.selIcon = itemArr[i]["selIcon"]! as NSString;
-            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000");
-            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF");
+            model.norIcon = itemArr[i]["norIcon"]! as NSString
+            model.selIcon = itemArr[i]["selIcon"]! as NSString
+            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000")
+            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF")
             model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
             itemModelArr.add(model)
         }

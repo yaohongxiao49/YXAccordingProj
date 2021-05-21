@@ -127,7 +127,7 @@ class YXHomeVC: YXBaseVC, UICollectionViewDelegateFlowLayout, UICollectionViewDe
         let offsetY = scrollView.contentOffset.y
         scrollView.bounces = offsetY > 0
         if offsetY >= 15 {
-            self.navigationView.backgroundColor = UIColor.yxColorWithHexString(hex: "#FFFFFF");
+            self.navigationView.backgroundColor = UIColor.yxColorWithHexString(hex: "#FFFFFF")
         }
         else {
             self.navigationView.backgroundColor = UIColor.clear

@@ -14,8 +14,8 @@ class YXBaseNavigationView: UIView {
     
     var yxBaseNavigationViewBackBlock : YXBaseNavigationViewBackBlock?
     
-    var _baseVC : YXBaseVC!
-    var baseVC : YXBaseVC {
+    var _baseVC: YXBaseVC!
+    var baseVC: YXBaseVC {
         
         get {
             return _baseVC
@@ -25,7 +25,7 @@ class YXBaseNavigationView: UIView {
         }
     }
     
-    lazy var bgView : UIView = {
+    lazy var bgView: UIView = {
         
         let bgView = UIView.init()
         bgView.backgroundColor = UIColor.clear
@@ -39,7 +39,7 @@ class YXBaseNavigationView: UIView {
         return bgView
     }()
     
-    lazy var titleLab : UILabel = {
+    lazy var titleLab: UILabel = {
         
         let titleLab = UILabel.init()
         titleLab.textAlignment = .center
@@ -54,7 +54,7 @@ class YXBaseNavigationView: UIView {
         return titleLab
     }()
     
-    lazy var backBtn : UIButton = {
+    lazy var backBtn: UIButton = {
         
         let backBtn = UIButton.init(type: UIButton.ButtonType.custom)
         backBtn.setImage(UIImage.init(named: "YXBaseBackArrowImg"), for: UIControl.State.normal)
@@ -91,7 +91,7 @@ class YXBaseNavigationView: UIView {
     //MARK:- 初始化视图
     func initView() {
         
-        self.titleLab.text = "标题";
+        self.titleLab.text = "标题"
         self.backBtn.isHidden = true
     }
     

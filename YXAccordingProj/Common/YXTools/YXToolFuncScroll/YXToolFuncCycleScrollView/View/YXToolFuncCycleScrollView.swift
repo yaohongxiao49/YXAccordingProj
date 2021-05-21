@@ -67,13 +67,13 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                 self.boolOpenTimer = false
             }
             else {
-                self.pageBackView.isHidden = !self.boolPageController;
+                self.pageBackView.isHidden = !self.boolPageController
                 self.scrollView.isScrollEnabled = true
                 updateFirstValueByBoolFirst(boolFirst: true)
                 self.boolOpenTimer = true
             }
             
-            self.pageControl.numberOfPages = imgValueArr!.count;
+            self.pageControl.numberOfPages = imgValueArr!.count
             setImageFromImageNames()
         }
     }
@@ -116,8 +116,8 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                 return
             }
             
-            let judgeCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2;
-            let judgeShowCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1;
+            let judgeCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2
+            let judgeShowCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1
             
             for i in 0 ..< currentPage {
                 if self.boolHorizontal {
@@ -243,7 +243,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         else {
             initViewByNotCycle()
         }
-        self.rollingDistance = self.boolHorizontal ? self.scrollView.bounds.size.width : self.scrollView.bounds.size.height;
+        self.rollingDistance = self.boolHorizontal ? self.scrollView.bounds.size.width : self.scrollView.bounds.size.height
     }
     
     required init?(coder: NSCoder) {
@@ -253,16 +253,16 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     //MARK:- 设置图片
     func setImageFromImageNames() {
         
-        var i: NSInteger = 0;
-        var j: NSInteger = 0;
+        var i: NSInteger = 0
+        var j: NSInteger = 0
         
         if !self.boolCycle {
             initImgVByCount(count: self.imgValueArr!.count)
             
             for imageView : UIImageView in self.imgViewsArr as! [UIImageView] {
-                let infoModel: YXToolFuncCycleScrollInfoModel = self.imgValueArr![i] as! YXToolFuncCycleScrollInfoModel;
+                let infoModel: YXToolFuncCycleScrollInfoModel = self.imgValueArr![i] as! YXToolFuncCycleScrollInfoModel
                 imageView.image = UIImage.init(named: infoModel.imgUrl as String)
-                imageView.tag = i;
+                imageView.tag = i
                 imageView.transform = .identity
                 i += 1
             }
@@ -290,17 +290,17 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                     if (j == self.imgValueArr!.count) {
                         j = 0
                     }
-                    let infoModel: YXToolFuncCycleScrollInfoModel = self.imgValueArr![j] as! YXToolFuncCycleScrollInfoModel;
+                    let infoModel: YXToolFuncCycleScrollInfoModel = self.imgValueArr![j] as! YXToolFuncCycleScrollInfoModel
                     imageView.image = UIImage.init(named: infoModel.imgUrl as String)
-                    imageView.tag = j;
-                    j += 1;
+                    imageView.tag = j
+                    j += 1
                 }
                 else {
-                    let infoModel: YXToolFuncCycleScrollInfoModel = self.imgValueArr![i] as! YXToolFuncCycleScrollInfoModel;
+                    let infoModel: YXToolFuncCycleScrollInfoModel = self.imgValueArr![i] as! YXToolFuncCycleScrollInfoModel
                     imageView.image = UIImage.init(named: infoModel.imgUrl as String)
-                    imageView.tag = i;
+                    imageView.tag = i
                 }
-                i += 1;
+                i += 1
             }
         }
         
@@ -333,26 +333,29 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                 case .YXToolFuncCycleScrollTypeFull:
                     imgV.frame = CGRect.init(x: scrollViewWidth * idx, y: 0.0, width: scrollViewWidth, height: scrollViewHeight)
                     imgV.clipsToBounds = true
+                    break
                 case .YXToolFuncCycleScrollTypeEdge:
                     imgV.frame = CGRect.init(x: scrollViewWidth * idx + left, y: top, width: scrollViewWidth - (left + right), height: scrollViewHeight - (top + bottom))
                     imgV.clipsToBounds = true
+                    break
                 case .YXToolFuncCycleScrollTypeCard:
-                    self.imgVSize = scrollViewWidth - left;
+                    self.imgVSize = scrollViewWidth - left
                     imgV.frame = CGRect.init(x: (self.imgVSize + right) * idx, y: top, width: self.imgVSize, height: scrollViewHeight - (top + bottom))
                     imgV.clipsToBounds = true
+                    break
                 case .YXToolFuncCycleScrollType3DCard:
-                    self.imgVSize = scrollViewWidth - left;
+                    self.imgVSize = scrollViewWidth - left
                     imgV.frame = CGRect.init(x: (self.imgVSize + right) * idx, y: top, width: self.imgVSize, height: scrollViewHeight - (top + bottom))
                     imgV.clipsToBounds = true
+                    break
                 default:
-                    imgV.frame = CGRect.init(x: scrollViewWidth * idx, y: 0.0, width: scrollViewWidth, height: scrollViewHeight)
-                    imgV.clipsToBounds = true
+                    break
                 }
                 idx += 1
             }
             
-            let imgCriticalValue: CGFloat = self.imgVSize != 0 ? self.imgVSize : scrollViewWidth;
-            self.rollingDistance = self.imgVSize != 0 ? (imgCriticalValue + right) : scrollViewWidth;
+            let imgCriticalValue: CGFloat = self.imgVSize != 0 ? self.imgVSize : scrollViewWidth
+            self.rollingDistance = self.imgVSize != 0 ? (imgCriticalValue + right) : scrollViewWidth
             if self.showType == .YXToolFuncCycleScrollTypeCard {
                 self.scrollView.clipsToBounds = false
                 self.scrollView.frame = CGRect.init(x: left / 2.0, y: 0.0, width: self.rollingDistance, height: scrollViewHeight)
@@ -375,26 +378,29 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                 case .YXToolFuncCycleScrollTypeFull:
                     imgV.frame = CGRect.init(x: 0.0, y: scrollViewHeight * idx, width: scrollViewWidth, height: scrollViewHeight)
                     imgV.clipsToBounds = true
+                    break
                 case .YXToolFuncCycleScrollTypeEdge:
                     imgV.frame = CGRect.init(x: left, y: scrollViewHeight * idx + top, width: scrollViewWidth - (left + right), height: scrollViewHeight - (top + bottom))
                     imgV.clipsToBounds = true
+                    break
                 case .YXToolFuncCycleScrollTypeCard:
-                    self.imgVSize = scrollViewHeight - top;
+                    self.imgVSize = scrollViewHeight - top
                     imgV.frame = CGRect.init(x: left, y: (self.imgVSize + bottom) * idx, width: scrollViewWidth - (left + right), height: self.imgVSize)
                     imgV.clipsToBounds = true
+                    break
                 case .YXToolFuncCycleScrollType3DCard:
-                    self.imgVSize = scrollViewHeight - top;
+                    self.imgVSize = scrollViewHeight - top
                     imgV.frame = CGRect.init(x: left, y: (self.imgVSize + bottom) * idx, width: scrollViewWidth - (left + right), height: self.imgVSize)
                     imgV.clipsToBounds = true
+                    break
                 default:
-                    imgV.frame = CGRect.init(x: 0.0, y: scrollViewHeight * idx, width: scrollViewWidth, height: scrollViewHeight)
-                    imgV.clipsToBounds = true
+                    break
                 }
                 idx += 1.0
             }
             
-            let imgCriticalValue: CGFloat = self.imgVSize != 0 ? self.imgVSize : scrollViewHeight;
-            self.rollingDistance = self.imgVSize != 0 ? (imgCriticalValue + bottom) : scrollViewHeight;
+            let imgCriticalValue: CGFloat = self.imgVSize != 0 ? self.imgVSize : scrollViewHeight
+            self.rollingDistance = self.imgVSize != 0 ? (imgCriticalValue + bottom) : scrollViewHeight
             if self.showType == .YXToolFuncCycleScrollTypeCard {
                 self.scrollView.clipsToBounds = false
                 self.scrollView.frame = CGRect.init(x: 0.0, y: top / 2.0, width: scrollViewWidth, height: self.rollingDistance)
@@ -434,14 +440,14 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                 zoomAnimationByView(view: imageView, type: 1, current: i)
             }
             
-            i += 1;
+            i += 1
         }
     }
     
     //MARK: processTimer
     @objc func processTimer() {
 
-        let judgeCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2;
+        let judgeCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2
         if self.boolHorizontal {
             self.scrollView.setContentOffset(CGPoint.init(x: self.rollingDistance * CGFloat(judgeCount), y: 0.0), animated: true)
         }
@@ -454,7 +460,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     func scrollViewBlock() {
         
         if (self.yxToolFuncCycleScrollMoveBlock != nil) {
-            self.yxToolFuncCycleScrollMoveBlock!(self.pageControl.currentPage);
+            self.yxToolFuncCycleScrollMoveBlock!(self.pageControl.currentPage)
         }
     }
     
@@ -510,22 +516,22 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         
         var centerOrigin: CGFloat = 0.0
         if self.boolHorizontal {
-            centerOrigin = self.scrollView.bounds.size.width * 0.5 - edgeInsets.right / 2.0;
+            centerOrigin = self.scrollView.bounds.size.width * 0.5 - edgeInsets.right / 2.0
         }
         else {
-            centerOrigin = self.scrollView.bounds.size.height * 0.5 - edgeInsets.bottom / 2;
+            centerOrigin = self.scrollView.bounds.size.height * 0.5 - edgeInsets.bottom / 2
         }
-        centerOrigin = self.offsetOrigin + centerOrigin;
+        centerOrigin = self.offsetOrigin + centerOrigin
         
         if self.boolDynamic {
-            let centerImgOrigin: CGFloat = self.boolHorizontal ? view.center.x : view.center.y;
-            let imgSizeOrigin: CGFloat = self.boolHorizontal ? view.bounds.size.width : view.bounds.size.height;
+            let centerImgOrigin: CGFloat = self.boolHorizontal ? view.center.x : view.center.y
+            let imgSizeOrigin: CGFloat = self.boolHorizontal ? view.bounds.size.width : view.bounds.size.height
             //移动间距
-            let distance: CGFloat = abs(centerImgOrigin - centerOrigin);
+            let distance: CGFloat = abs(centerImgOrigin - centerOrigin)
             //移动比例（如果间距为0，则说明当前所在中间位置，即使用设定比例）
-            let proportion: CGFloat = distance == 0 ? self.zoomRadio : (imgSizeOrigin / distance);
+            let proportion: CGFloat = distance == 0 ? self.zoomRadio : (imgSizeOrigin / distance)
             //放大比例（如果移动比例大于指定比例，则使用指定比例，最小比例为1）
-            let scale: CGFloat = proportion >= self.zoomRadio ? self.zoomRadio : proportion <= 1 ? 1 : proportion;
+            let scale: CGFloat = proportion >= self.zoomRadio ? self.zoomRadio : proportion <= 1 ? 1 : proportion
             view.transform = CGAffineTransform.init(scaleX: scale, y: scale)
         }
         else {
@@ -547,7 +553,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         
         if (self.yxToolFuncCycleScrollBlock != nil) {
             var infoModel: YXToolFuncCycleScrollInfoModel = YXToolFuncCycleScrollInfoModel.init()
-            infoModel = self.imgValueArr![gesture.view!.tag] as! YXToolFuncCycleScrollInfoModel;
+            infoModel = self.imgValueArr![gesture.view!.tag] as! YXToolFuncCycleScrollInfoModel
             self.yxToolFuncCycleScrollBlock!(infoModel)
         }
     }
@@ -555,7 +561,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     //MARK:- 点击分页控制器
     @objc func changePageControl(pageControl: UIPageControl) {
         
-        currentPage = pageControl.currentPage;
+        currentPage = pageControl.currentPage
     }
     
     //MARK:- Timer
@@ -579,28 +585,28 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
     //MARK:- 滚动切换
     func scrollViewChangeImgByScrollView(scrollView: UIScrollView) {
         
-        let judgeBigCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2;
-        let judgeSmallCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 1 : self.showType == .YXToolFuncCycleScrollType3DCard ? 1 : 0;
-        var judgeShowCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1;
+        let judgeBigCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 3 : self.showType == .YXToolFuncCycleScrollType3DCard ? 3 : 2
+        let judgeSmallCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 1 : self.showType == .YXToolFuncCycleScrollType3DCard ? 1 : 0
+        var judgeShowCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1
         
-        var offsetOrigin: CGFloat = 0.0;
+        var offsetOrigin: CGFloat = 0.0
         if self.boolHorizontal {
-            offsetOrigin = scrollView.contentOffset.x;
+            offsetOrigin = scrollView.contentOffset.x
         }
         else {
-            offsetOrigin = scrollView.contentOffset.y;
+            offsetOrigin = scrollView.contentOffset.y
         }
         self.offsetOrigin = offsetOrigin;
         
         if !self.boolCycle {
-            judgeShowCount = NSInteger(floor((scrollView.contentOffset.x + self.rollingDistance * 0.5) / self.rollingDistance));
+            judgeShowCount = NSInteger(floor((scrollView.contentOffset.x + self.rollingDistance * 0.5) / self.rollingDistance))
             
             if judgeShowCount > self.pageControl.currentPage {
-                self.alreadCurrent = (judgeShowCount - 1) > 0 ? (judgeShowCount - 1) : 0;
+                self.alreadCurrent = (judgeShowCount - 1) > 0 ? (judgeShowCount - 1) : 0
                 useZoomAnimationByCurrent(current: judgeShowCount)
             }
             else if judgeShowCount < self.pageControl.currentPage {
-                self.alreadCurrent = (judgeShowCount + 1) > 0 ? (judgeShowCount + 1) : 0;
+                self.alreadCurrent = (judgeShowCount + 1) > 0 ? (judgeShowCount + 1) : 0
                 
                 useZoomAnimationByCurrent(current: judgeShowCount)
             }
@@ -608,30 +614,30 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
                 if self.boolDynamic {
                     useZoomAnimationByCurrent(current: judgeShowCount)
                 }
-                return;
+                return
             }
-            self.pageControl.currentPage = judgeShowCount;
+            self.pageControl.currentPage = judgeShowCount
             
             self.pageBtn.setTitle(NSString.localizedStringWithFormat(" %d/%d", self.pageControl.currentPage + 1, imgValueArr!.count) as String, for: UIControl.State.normal)
         }
         else {
             if offsetOrigin >= CGFloat(judgeBigCount) * self.rollingDistance { //滑动到右边视图
                 updateLastValue()
-                self.pageControl.currentPage = self.pageControl.currentPage == imgValueArr!.count - 1 ? 0 : self.pageControl.currentPage + 1;
-                self.alreadCurrent = (judgeShowCount - 1) > 0 ? (judgeShowCount - 1) : 0;
+                self.pageControl.currentPage = self.pageControl.currentPage == imgValueArr!.count - 1 ? 0 : self.pageControl.currentPage + 1
+                self.alreadCurrent = (judgeShowCount - 1) > 0 ? (judgeShowCount - 1) : 0
                 useZoomAnimationByCurrent(current: judgeShowCount)
             }
             else if offsetOrigin <= CGFloat(judgeSmallCount) * self.rollingDistance { //滑动到左边视图
                 updateFirstValueByBoolFirst(boolFirst: false)
-                self.pageControl.currentPage = self.pageControl.currentPage == 0 ? imgValueArr!.count - 1 : self.pageControl.currentPage - 1;
-                self.alreadCurrent = (judgeShowCount + 1) > 0 ? (judgeShowCount + 1) : 0;
+                self.pageControl.currentPage = self.pageControl.currentPage == 0 ? imgValueArr!.count - 1 : self.pageControl.currentPage - 1
+                self.alreadCurrent = (judgeShowCount + 1) > 0 ? (judgeShowCount + 1) : 0
                 useZoomAnimationByCurrent(current: judgeShowCount)
             }
             else {
                 if self.boolDynamic {
                     useZoomAnimationByCurrent(current: judgeShowCount)
                 }
-                return;
+                return
             }
             setImageFromImageNames()
             
@@ -696,7 +702,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         
         self.pageControl = YXToolPageControl.init(frame: self.pageBackView.bounds)
         self.pageControl.center = CGPoint.init(x: self.pageBackView.bounds.midX, y: self.pageBackView.bounds.midY)
-        self.pageControl.numberOfPages = self.imgViewsArr.count;
+        self.pageControl.numberOfPages = self.imgViewsArr.count
         self.pageControl.currentPageIndicatorTintColor = UIColor.blue
         self.pageControl.pageIndicatorTintColor = UIColor.white
         self.pageControl.currentPage = 0
@@ -715,7 +721,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         addSubview(self.pageBtn)
         self.pageBtn.isHidden = !self.boolPageBtn
         
-        let judgeHiddenCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1;
+        let judgeHiddenCount: NSInteger = self.showType == .YXToolFuncCycleScrollTypeCard ? 2 : self.showType == .YXToolFuncCycleScrollType3DCard ? 2 : 1
         useZoomAnimationByCurrent(current: judgeHiddenCount)
     }
 
@@ -730,7 +736,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         self.scrollView.showsVerticalScrollIndicator = false
         self.scrollView.isPagingEnabled = true
         self.scrollView.bounces = true
-        self.scrollView.delegate = self;
+        self.scrollView.delegate = self
         addSubview(self.scrollView)
         
         self.pageBackView = UIView.init(frame: CGRect.init(x: 0, y: self.bounds.maxY - 20, width: self.bounds.width, height: 20))
@@ -739,7 +745,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         
         self.pageControl = YXToolPageControl.init(frame: self.pageBackView.bounds)
         self.pageControl.center = CGPoint.init(x: self.pageBackView.bounds.midX, y: self.pageBackView.bounds.midY)
-        self.pageControl.numberOfPages = self.imgViewsArr.count;
+        self.pageControl.numberOfPages = self.imgViewsArr.count
         self.pageControl.currentPageIndicatorTintColor = UIColor.blue
         self.pageControl.pageIndicatorTintColor = UIColor.white
         self.pageControl.currentPage = 0
@@ -765,7 +771,7 @@ class YXToolFuncCycleScrollView: UIView, UIScrollViewDelegate {
         if self.imgViewsArr.count != count {
             for i in 0 ..< count {
                 let imgV: UIImageView = UIImageView.init()
-                imgV.tag = i;
+                imgV.tag = i
                 if self.boolHorizontal {
                     imgV.frame = CGRect.init(x: self.scrollView.frame.size.width * CGFloat(i), y: 0.0, width: self.scrollView.frame.size.width, height: self.scrollView.frame.size.height)
                 }

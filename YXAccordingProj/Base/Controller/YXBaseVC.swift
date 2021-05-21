@@ -12,7 +12,7 @@ class YXBaseVC: UIViewController {
     
     lazy var navigationView : YXBaseNavigationView = {
         
-        let navigationView = YXBaseNavigationView.init();
+        let navigationView = YXBaseNavigationView.init()
         navigationView.baseVC = self
         self.view.addSubview(navigationView)
         

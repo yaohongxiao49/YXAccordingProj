@@ -26,16 +26,16 @@ class YXBaseNavigationVC: UINavigationController {
         
         if (viewControllers.count == 1) {
             self.popViewController(animated: animated)
-            return;
+            return
         }
         
         for i in 0 ..< viewControllers.count {
             let vc = viewControllers[i]
             if (i == 1) {
-                vc.hidesBottomBarWhenPushed = true;
+                vc.hidesBottomBarWhenPushed = true
             }
             else {
-                vc.hidesBottomBarWhenPushed = false;
+                vc.hidesBottomBarWhenPushed = false
             }
         }
         
@@ -45,10 +45,10 @@ class YXBaseNavigationVC: UINavigationController {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         if (self.viewControllers.count == 1) {
-            viewController.hidesBottomBarWhenPushed = true;
+            viewController.hidesBottomBarWhenPushed = true
         }
         else {
-            viewController.hidesBottomBarWhenPushed = false;
+            viewController.hidesBottomBarWhenPushed = false
         }
         
         super.pushViewController(viewController, animated: animated)

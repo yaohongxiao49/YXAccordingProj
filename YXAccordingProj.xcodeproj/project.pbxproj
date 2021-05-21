@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		53D9AD6C5CCCCB47CFE9DE10 /* libPods-YXAccordingProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 601FF6464F145D8B295534C5 /* libPods-YXAccordingProj.a */; };
+		8413011A26560EBE000BCD5E /* YXAlertViewControllerAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413011926560EBE000BCD5E /* YXAlertViewControllerAutoLayout.swift */; };
+		8413011C265642B6000BCD5E /* YXAlertViewControllerTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413011B265642B6000BCD5E /* YXAlertViewControllerTransitionAnimation.swift */; };
+		8413011E26564456000BCD5E /* YXAlertViewControllerBaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413011D26564456000BCD5E /* YXAlertViewControllerBaseAnimation.swift */; };
+		8413012026564B0B000BCD5E /* YXAlertViewControllerFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413011F26564B0B000BCD5E /* YXAlertViewControllerFadeAnimation.swift */; };
+		8413012226564B25000BCD5E /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413012126564B25000BCD5E /* YXAlertViewControllerScaleFadeAnimation.swift */; };
+		8413012426564B36000BCD5E /* YXAlertViewControllerDropDownAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413012326564B36000BCD5E /* YXAlertViewControllerDropDownAnimation.swift */; };
 		842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4C362648C94000EEED63 /* AppDelegate.swift */; };
 		842A4C392648C94000EEED63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4C382648C94000EEED63 /* SceneDelegate.swift */; };
 		842A4C3B2648C94000EEED63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4C3A2648C94000EEED63 /* ContentView.swift */; };
@@ -62,6 +68,12 @@
 
 /* Begin PBXFileReference section */
 		601FF6464F145D8B295534C5 /* libPods-YXAccordingProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXAccordingProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413011926560EBE000BCD5E /* YXAlertViewControllerAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerAutoLayout.swift; sourceTree = "<group>"; };
+		8413011B265642B6000BCD5E /* YXAlertViewControllerTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerTransitionAnimation.swift; sourceTree = "<group>"; };
+		8413011D26564456000BCD5E /* YXAlertViewControllerBaseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerBaseAnimation.swift; sourceTree = "<group>"; };
+		8413011F26564B0B000BCD5E /* YXAlertViewControllerFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerFadeAnimation.swift; sourceTree = "<group>"; };
+		8413012126564B25000BCD5E /* YXAlertViewControllerScaleFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerScaleFadeAnimation.swift; sourceTree = "<group>"; };
+		8413012326564B36000BCD5E /* YXAlertViewControllerDropDownAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewControllerDropDownAnimation.swift; sourceTree = "<group>"; };
 		842A4C332648C94000EEED63 /* YXAccordingProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXAccordingProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A4C362648C94000EEED63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842A4C382648C94000EEED63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +296,12 @@
 			isa = PBXGroup;
 			children = (
 				84487AC6264E4ECC009A3838 /* YXAlertViewController.swift */,
+				8413011B265642B6000BCD5E /* YXAlertViewControllerTransitionAnimation.swift */,
+				8413011926560EBE000BCD5E /* YXAlertViewControllerAutoLayout.swift */,
+				8413011D26564456000BCD5E /* YXAlertViewControllerBaseAnimation.swift */,
+				8413011F26564B0B000BCD5E /* YXAlertViewControllerFadeAnimation.swift */,
+				8413012126564B25000BCD5E /* YXAlertViewControllerScaleFadeAnimation.swift */,
+				8413012326564B36000BCD5E /* YXAlertViewControllerDropDownAnimation.swift */,
 			);
 			path = YXAlertViewController;
 			sourceTree = "<group>";
@@ -621,19 +639,25 @@
 				849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */,
 				842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */,
 				848257D1264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift in Sources */,
+				8413011A26560EBE000BCD5E /* YXAlertViewControllerAutoLayout.swift in Sources */,
 				842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */,
 				842A4CD72648CFEF00EEED63 /* YXHomeVC.swift in Sources */,
+				8413012226564B25000BCD5E /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */,
 				84794776264A504200423EBE /* YXColorCategory.swift in Sources */,
 				842A4CDC2648D25300EEED63 /* YXBaseNavigationVC.swift in Sources */,
+				8413011C265642B6000BCD5E /* YXAlertViewControllerTransitionAnimation.swift in Sources */,
 				848257CF264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift in Sources */,
 				848257D4264CC48100B1C8CE /* YXToolPageControl.swift in Sources */,
 				842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */,
 				842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */,
 				84487AC4264E1056009A3838 /* YXSeparationVC.swift in Sources */,
 				849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */,
+				8413012426564B36000BCD5E /* YXAlertViewControllerDropDownAnimation.swift in Sources */,
 				842A4CC22648CF0B00EEED63 /* YXBaseTabBar.swift in Sources */,
 				842A4C392648C94000EEED63 /* SceneDelegate.swift in Sources */,
+				8413012026564B0B000BCD5E /* YXAlertViewControllerFadeAnimation.swift in Sources */,
 				842A4C3B2648C94000EEED63 /* ContentView.swift in Sources */,
+				8413011E26564456000BCD5E /* YXAlertViewControllerBaseAnimation.swift in Sources */,
 				84EE7C0A264BBCBB00CF9C61 /* YXHomeListModel.swift in Sources */,
 				84EE7C02264BB73600CF9C61 /* YXHomeCollecCell.swift in Sources */,
 			);

@@ -98,12 +98,13 @@ class YXBaseTabBarItemView: UIView {
         case .YXBaseTabBarItemStateTypeNor:
             self.imgV.image = UIImage.init(named: (self.itemModel?.norIcon!)! as String)
             self.titleLab.textColor = self.itemModel?.norTitleColor
+            break
         case .YXBaseTabBarItemStateTypeSel:
             self.imgV.image = UIImage.init(named: (self.itemModel?.selIcon!)! as String)
             self.titleLab.textColor = self.itemModel?.selTitleColor
+            break
         default:
-            self.imgV.image = UIImage.init(named: (self.itemModel?.norIcon!)! as String)
-            self.titleLab.textColor = self.itemModel?.norTitleColor
+            break
         }
         
         self.titleLab.text = self.itemModel?.itemTitle as String?

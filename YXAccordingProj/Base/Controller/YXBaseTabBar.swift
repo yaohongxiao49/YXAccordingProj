@@ -14,7 +14,7 @@ class YXBaseTabBar: UITabBarController {
         let customTabbar = self.tabBar
         customTabbar.frame = CGRect.init(x: 0.0, y: self.yxScreenHeight - self.yxToolHeight, width: self.yxScreenWidth, height: self.yxToolHeight)
         customTabbar.isTranslucent = true
-        customTabbar.standardAppearance.backgroundEffect = nil;
+        customTabbar.standardAppearance.backgroundEffect = nil
         customTabbar.standardAppearance.backgroundColor = UIColor.white
         customTabbar.standardAppearance.backgroundImage = UIImage()
         customTabbar.standardAppearance.shadowImage = UIImage()
@@ -69,10 +69,10 @@ class YXBaseTabBar: UITabBarController {
             let model = YXBaseTabBarItemModel.init()
             model.vc = (itemArr[i]["vc"] as! YXBaseVC)
             model.itemTitle = itemArr[i]["title"]! as? NSString
-            model.norIcon = itemArr[i]["norIcon"]! as? NSString;
-            model.selIcon = itemArr[i]["selIcon"]! as? NSString;
-            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000");
-            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF");
+            model.norIcon = itemArr[i]["norIcon"]! as? NSString
+            model.selIcon = itemArr[i]["selIcon"]! as? NSString
+            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000")
+            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF")
             model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
             itemModelArr.add(model)
         }
@@ -90,7 +90,7 @@ class YXBaseTabBar: UITabBarController {
     func initVC() {
         
         for model : YXBaseTabBarItemModel in initItemValue() as! [YXBaseTabBarItemModel] {
-            addChildrenVC(model.vc, title: nil, image: nil, selectedImage: nil);
+            addChildrenVC(model.vc, title: nil, image: nil, selectedImage: nil)
         }
     }
     

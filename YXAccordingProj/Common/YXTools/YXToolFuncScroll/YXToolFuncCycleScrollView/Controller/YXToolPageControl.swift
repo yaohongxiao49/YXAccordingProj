@@ -28,7 +28,7 @@ class YXToolPageControl: UIPageControl {
                     }
                     
                     let img: UIImageView = bgView.subviews[0] as! UIImageView
-                    img.contentMode = .center;
+                    img.contentMode = .center
                     
                     if i == currentPage {
                         img.image = self.selImg
