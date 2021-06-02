@@ -41,6 +41,7 @@
 		848257DD264D16B700B1C8CE /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 848257D9264D16B700B1C8CE /* 3.png */; };
 		849D21E4264A27580081F488 /* YXBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21E3264A27580081F488 /* YXBaseNavigationView.swift */; };
 		849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */; };
+		849EA1C02667256A00E8A41A /* YXHomeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849EA1BF2667256A00E8A41A /* YXHomeAlertView.swift */; };
 		84EE7BFD264B86FF00CF9C61 /* YXToolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */; };
 		84EE7C01264BB73600CF9C61 /* YXHomeCollecCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EE7BFF264BB73600CF9C61 /* YXHomeCollecCell.xib */; };
 		84EE7C02264BB73600CF9C61 /* YXHomeCollecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE7C00264BB73600CF9C61 /* YXHomeCollecCell.swift */; };
@@ -107,6 +108,7 @@
 		848257D9264D16B700B1C8CE /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		849D21E3264A27580081F488 /* YXBaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseNavigationView.swift; sourceTree = "<group>"; };
 		849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSizeCategory.swift; sourceTree = "<group>"; };
+		849EA1BF2667256A00E8A41A /* YXHomeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXHomeAlertView.swift; sourceTree = "<group>"; };
 		84EE7BFC264B86FF00CF9C61 /* YXToolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolVC.swift; sourceTree = "<group>"; };
 		84EE7BFF264BB73600CF9C61 /* YXHomeCollecCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXHomeCollecCell.xib; sourceTree = "<group>"; };
 		84EE7C00264BB73600CF9C61 /* YXHomeCollecCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXHomeCollecCell.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		842A4CCD2648CFB300EEED63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				849EA1BE2667255F00E8A41A /* YXHomeAlertView */,
 				84EE7C03264BB75B00CF9C61 /* YXHomeCollecReusableView */,
 			);
 			path = View;
@@ -416,6 +419,14 @@
 				849D21F3264A2EBE0081F488 /* YXSizeCategory.swift */,
 			);
 			path = YXCategoryNSObject;
+			sourceTree = "<group>";
+		};
+		849EA1BE2667255F00E8A41A /* YXHomeAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				849EA1BF2667256A00E8A41A /* YXHomeAlertView.swift */,
+			);
+			path = YXHomeAlertView;
 			sourceTree = "<group>";
 		};
 		84EE7BF0264B750E00CF9C61 /* Cell */ = {
@@ -642,6 +653,7 @@
 				8413011A26560EBE000BCD5E /* YXAlertViewControllerAutoLayout.swift in Sources */,
 				842A4C372648C94000EEED63 /* AppDelegate.swift in Sources */,
 				842A4CD72648CFEF00EEED63 /* YXHomeVC.swift in Sources */,
+				849EA1C02667256A00E8A41A /* YXHomeAlertView.swift in Sources */,
 				8413012226564B25000BCD5E /* YXAlertViewControllerScaleFadeAnimation.swift in Sources */,
 				84794776264A504200423EBE /* YXColorCategory.swift in Sources */,
 				842A4CDC2648D25300EEED63 /* YXBaseNavigationVC.swift in Sources */,
