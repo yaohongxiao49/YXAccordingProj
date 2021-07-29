@@ -64,16 +64,10 @@ class YXBaseTabBar: UITabBarController {
         
         let homeVC = YXHomeVC.init()
         let toolVC = YXToolVC.init()
-        let itemArr = [["vc": homeVC, "title": "首页", "norIcon": "YXHomeTabNorImg", "selIcon": "YXHomeTabSelImg"], ["vc": toolVC, "title": "工具", "norIcon": "YXToolTabNorImg", "selIcon": "YXToolTabSelImg"]]
+        let itemArr = [["vc": homeVC], ["vc": toolVC]]
         for i in 0 ..< itemArr.count {
             let model = YXBaseTabBarItemModel.init()
-            model.vc = (itemArr[i]["vc"] as! YXBaseVC)
-            model.itemTitle = itemArr[i]["title"]! as? NSString
-            model.norIcon = itemArr[i]["norIcon"]! as? NSString
-            model.selIcon = itemArr[i]["selIcon"]! as? NSString
-            model.norTitleColor = UIColor.yxColorWithHexString(hex: "#000000")
-            model.selTitleColor = UIColor.yxColorWithHexString(hex: "#1D48FF")
-            model.type = i == 0 ? .YXBaseTabBarItemStateTypeSel : .YXBaseTabBarItemStateTypeNor
+            model.vc = (itemArr[i]["vc"]!)
             itemModelArr.add(model)
         }
         
