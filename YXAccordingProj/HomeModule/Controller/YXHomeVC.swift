@@ -91,10 +91,18 @@ class YXHomeVC: YXBaseVC, UICollectionViewDelegateFlowLayout, UICollectionViewDe
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let model: YXHomeListModel = self.dataSourceArr[indexPath.row]
-        let vc: YXSeparationVC = YXSeparationVC.init()
-        vc.model = model
-        self.pushToSonVC(vc: vc, animated: true)
+        switch Int(indexPath.row) {
+        case 0:
+            let alertView: YXHomeAlertView = YXHomeAlertView.init(frame: self.view.bounds)
+            let alertVC: YXAlertViewController = YXAlertViewController.alertControllerWithAlertView(alertView: alertView, preferredStyle: YXAlertViewControllerStyle.YXAlertViewControllerStyleActionSheet)
+            self.present(alertVC, animated: true, completion: nil)
+        default:
+            let model: YXHomeListModel = self.dataSourceArr[indexPath.row]
+            let vc: YXSeparationVC = YXSeparationVC.init()
+            vc.model = model
+            self.pushToSonVC(vc: vc, animated: true)
+            break
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
