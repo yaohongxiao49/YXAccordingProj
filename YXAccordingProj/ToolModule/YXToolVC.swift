@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class YXToolVC: YXBaseVC {
+class YXToolVC: YXBaseVC, AVCapturePhotoCaptureDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +19,12 @@ class YXToolVC: YXBaseVC {
         
         initView()
     }
-
+    
+    //MARK:- 初始化视图
     func initView() {
         
+        let vc: YXPhotoVC = YXPhotoVC.init()
+        self.pushToSonVC(vc: vc, animated: true)
     }
     
 }

@@ -31,6 +31,7 @@
 		842A4CF22649030800EEED63 /* YXBaseTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */; };
 		84487AC4264E1056009A3838 /* YXSeparationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84487AC3264E1056009A3838 /* YXSeparationVC.swift */; };
 		84487AC7264E4ECC009A3838 /* YXAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84487AC6264E4ECC009A3838 /* YXAlertViewController.swift */; };
+		845B0EAF26DF5E7200A38012 /* YXPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0EAE26DF5E7200A38012 /* YXPhotoVC.swift */; };
 		84794776264A504200423EBE /* YXColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84794775264A504200423EBE /* YXColorCategory.swift */; };
 		848257CF264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */; };
 		848257D1264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */; };
@@ -99,6 +100,7 @@
 		842A4CF12649030800EEED63 /* YXBaseTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBaseTabBarItemView.swift; sourceTree = "<group>"; };
 		84487AC3264E1056009A3838 /* YXSeparationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXSeparationVC.swift; sourceTree = "<group>"; };
 		84487AC6264E4ECC009A3838 /* YXAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXAlertViewController.swift; sourceTree = "<group>"; };
+		845B0EAE26DF5E7200A38012 /* YXPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPhotoVC.swift; sourceTree = "<group>"; };
 		84794775264A504200423EBE /* YXColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXColorCategory.swift; sourceTree = "<group>"; };
 		848257CE264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollView.swift; sourceTree = "<group>"; };
 		848257D0264CBFD800B1C8CE /* YXToolFuncCycleScrollInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXToolFuncCycleScrollInfoModel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				84487AC2264E101D009A3838 /* ProcessingImgsModule */,
 				84EE7BFB264B86E000CF9C61 /* ToolModule */,
 				842A4CCB2648CFB300EEED63 /* HomeModule */,
+				845B0EAB26DF5E2C00A38012 /* Media */,
 				842A4C9C2648CDBD00EEED63 /* Base */,
 				849D21E5264A28A20081F488 /* Common */,
 				842A4C362648C94000EEED63 /* AppDelegate.swift */,
@@ -309,6 +312,14 @@
 				8413012326564B36000BCD5E /* YXAlertViewControllerDropDownAnimation.swift */,
 			);
 			path = YXAlertViewController;
+			sourceTree = "<group>";
+		};
+		845B0EAB26DF5E2C00A38012 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				845B0EAE26DF5E7200A38012 /* YXPhotoVC.swift */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 		84794774264A502E00423EBE /* YXCategoryColor */ = {
@@ -665,6 +676,7 @@
 				848257CF264CBF9500B1C8CE /* YXToolFuncCycleScrollView.swift in Sources */,
 				848257D4264CC48100B1C8CE /* YXToolPageControl.swift in Sources */,
 				842A4CEA2648F85400EEED63 /* YXBaseTabBarItemModel.swift in Sources */,
+				845B0EAF26DF5E7200A38012 /* YXPhotoVC.swift in Sources */,
 				842A4CE42648D6A100EEED63 /* YXBaseTabBarView.swift in Sources */,
 				84487AC4264E1056009A3838 /* YXSeparationVC.swift in Sources */,
 				849D21F4264A2EBE0081F488 /* YXSizeCategory.swift in Sources */,
